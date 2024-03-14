@@ -1,0 +1,255 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.loading-spinner-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.loading-spinner {
+	width: 100px;
+	height: 100px;
+	background-image: url("https://purepng.com/public/uploads/large/purepng.com-batman-logobatmansuperherocomicdc-comicsbob-kanebat-manbruce-wayne-1701528523452unulm.png"); /* Replace with the path to your Batman logo SVG */
+	background-size: contain;
+	animation: spin 2s linear infinite, fadeOut 2s 1s forwards;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+main {
+	position: relative;
+	z-index: 0;
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	min-height: 100vh;
+	background: #ffd700;
+	color: #282c34;
+	font-family: "Gotham", sans-serif;
+}
+
+.header {
+	text-align: center;
+	background-image: url("https://tse3.mm.bing.net/th?id=OIP.AYDF1RbBZH0Q5IqCCtYWKgHaEK&pid=Api&P=0&h=180");
+	background-size: cover;
+
+	padding-bottom: 20px;
+	height: 200px;
+}
+
+.profile-and-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#profile_pic {
+	margin: auto;
+	margin-top: 20px;
+	height: 150px;
+	width: 250px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+}
+.name_add {
+	margin-right: 300px;
+	margin-top: 20px;
+	color: #ffd700;
+}
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	margin: 10px;
+	text-decoration: underline;
+	font-family: "Bangers", sans-serif;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 10px;
+	text-decoration: underline;
+	color: #282c34;
+}
+.details {
+	display: flex;
+	transition: opacity 0.5s ease-in-out;
+	animation: fadeIn 2s forwards;
+}
+#left {
+	width: 50%;
+	height: 100%;
+	float: left;
+	margin: 10px;
+	flex: 1;
+	margin-top: 10px;
+}
+
+#right {
+	margin-top: 10px;
+	width: 50%;
+}
+p {
+	margin-top: 5px;
+}
+ul {
+	margin-top: 5px;
+}
+li {
+	list-style-type: none;
+}
+.experiences {
+	margin-top: 10px;
+}
+.experiences li,
+.interests li {
+	list-style-type: none;
+	color: #282c34;
+	align-items: center;
+}
+
+.interests ul,
+.skills ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px;
+}
+.interests li,
+.skills li {
+	width: 48%;
+	margin-top: 10px;
+}
+
+.skills,
+.education,
+li {
+	list-style: decimal;
+}
+
+ul li i {
+	margin-right: 10px;
+}
+.skills ul li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+#contactForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+label {
+	margin: 10px 0;
+	font-weight: bold;
+	color: #282c34;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #ff8c00;
+	color: #fff;
+	padding: 12px 24px;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #282c34;
+}
+.thank-you {
+	text-align: center;
+	margin: 20px 0;
+	padding: 20px;
+	background-color: #282c34;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.bat-signal-image img {
+	width: 150px;
+	height: auto;
+	margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+	.name_add {
+		margin-right: 0;
+	}
+
+	#profile_pic {
+		margin: auto;
+	}
+
+	#left,
+	#right {
+		width: 100%;
+	}
+
+	.details {
+		flex-direction: column;
+	}
+
+	.experiences ul,
+	.interests ul,
+	.skills ul,
+	.education ul {
+		padding-left: 10px;
+	}
+}
